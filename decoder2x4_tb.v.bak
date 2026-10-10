@@ -1,0 +1,18 @@
+module decoder2x4_tb();
+reg [1:0]a;
+reg en;
+wire[3:0]y;
+integer i;
+
+decoder2x4 DUT(a,en,y);
+
+initial
+ begin 
+   for(i=0;i<8;i=i+1)
+    begin
+      {a,en}=i;
+      #10;
+    end
+  end
+ end module
+
